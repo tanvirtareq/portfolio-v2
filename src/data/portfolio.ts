@@ -1,0 +1,358 @@
+export interface Experience {
+  title: string;
+  company: string;
+  period: string;
+  companyWebsite?: string;
+  responsibilities: string[];
+  technologies: string[];
+}
+
+export interface Project {
+  name: string;
+  description: string[];
+  technologies: string[];
+  githubLink?: string;
+  liveAppLink?: string;
+}
+
+export interface CompetitiveProgrammingEntry {
+  platform: string;
+  id: string;
+  profileLink: string;
+  achievements: string[];
+}
+
+export interface EducationEntry {
+  degree: string;
+  institution: string;
+  period: string;
+  notableCourses?: string[];
+  research?: string;
+  result?: string;
+  achievements?: string[];
+}
+
+export interface JudgingExperience {
+  role: string;
+  event: string;
+  responsibilities: string[];
+}
+
+export interface TeachingExperience {
+  institution: string;
+  responsibilities: string[];
+}
+
+export interface TechnicalWritingExperience {
+  company: string;
+  companyWebsite?: string;
+  responsibilities: string[];
+}
+
+export interface ProgrammingContestExperience {
+  event: string;
+  team?: string;
+  id?: string;
+  achievements: string[];
+}
+
+export interface PortfolioData {
+  name: string;
+  title: string;
+  aboutMe: string;
+  experience: Experience[];
+  projects: Project[];
+  skills: Record<string, string[]>;
+  contact: {
+    linkedin: string;
+    github: string;
+    email: string;
+    phone: string;
+  };
+  competitiveProgramming: CompetitiveProgrammingEntry[];
+  education: EducationEntry[];
+  judgingExperience: JudgingExperience[];
+  teachingExperience: TeachingExperience[];
+  technicalWritingExperience: TechnicalWritingExperience[];
+  programmingContestExperience: ProgrammingContestExperience[];
+}
+
+export const portfolio: PortfolioData = {
+  name: "Tanvir Tareq",
+  title: "Software Engineer",
+  aboutMe:
+    "<p>I am a passionate <strong>Software Engineer</strong> with over <strong>2.5 years of professional experience</strong> in building scalable, high-performance applications.<br>\nCurrently, I work at <strong>Therap Services, LLC</strong>, where I have contributed to enhancing core product features by improving billing efficiency, designing custom validation systems, and optimizing workflows that significantly boosted user experience and reduced processing time. I have also worked on migrating the frontend from <strong>JSP to React</strong>, modernizing the user interface and improving maintainability.<br>\nI hold a <strong>Bachelor's degree in Computer Science and Engineering</strong> from <strong>Shahjalal University of Science and Technology</strong>.<br>\nBeyond my professional work, I have a strong background in <strong>competitive programming</strong>, where I consistently ranked among the top performers across global platforms:<br>\n- <strong>Candidate Master</strong> on Codeforces (Top 0.03% globally)<br>\n- <strong>5-star on CodeChef</strong> (Top 1% globally)<br>\n- High rating of <strong>2283 on LeetCode</strong> (Top 0.69% globally)<br>\n- Achieved top placements in multiple <strong>ICPC and university-level contests</strong><br>\n- 4-time Meta HackerCup T-shirt winner (Top 8%, 6%, 4%, and 959th worldwide)<br>\nI am also deeply interested in <strong>Artificial Intelligence</strong> and have explored AI-driven personal projects, including developing a <strong>Dots and Boxes game</strong> with AI and building an <strong>Anki Desktop App add-on</strong> using <strong>agentic AI</strong> to create custom flashcards and add them to decks. For generating these custom flashcards, I utilized the <strong>Gemini API</strong>.<br>\nDriven by curiosity and a commitment to excellence, I strive to bridge the gap between <strong>theory and real-world applications</strong>, creating solutions that are both efficient and impactful.</p>",
+
+  experience: [
+    {
+      title: "Software Engineer",
+      company: "Therap Bd Ltd.",
+      period: "2023 - Present",
+      companyWebsite: "https://www.therapservices.net/",
+      responsibilities: [
+        "Engineered a high-performance Excel data ingestion pipeline with optimized batching and parallel execution to migrate millions of legacy records from an external platform, enabling seamless enterprise onboarding and reducing manual migration effort by 95%.",
+        "Optimized a search framework built with Java Spring and Hibernate on Oracle DB, achieving a 50x faster response.",
+        "Developed and maintained core product features in the billing system, including a dynamic rate-structure and customizable form settings.",
+        "Designed a custom validation rule engine that simplified the process of adding new business rules and improved workflow flexibility.",
+        "Integrated a digital document signing feature into form-based workflows, enabling faster and more reliable processing.",
+        "Built and maintained unit tests with TestNG and Mockito, ensuring code quality and system reliability.",
+        "Mentored junior developers in the team to help them get comfortable with the company tech stack and transferring domain knowledge in various aspects.",
+        "Contributed to the migration of the frontend from JSP to React, modernizing the application's interface and maintainability.",
+        "Managed code reviews for cross-team release items to ensure consistency, quality, and timely delivery.",
+      ],
+      technologies: [
+        "Java",
+        "Spring",
+        "Hibernate",
+        "Oracle DB",
+        "React",
+        "JSP",
+        "TestNG",
+        "Mockito",
+        "Playwright",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "SQL",
+        "Jenkins",
+        "Docker",
+        "Git",
+        "Jira",
+      ],
+    },
+  ],
+
+  projects: [
+    {
+      name: "Dots and Boxes game",
+      description: [
+        "Developed an interactive Dots and Boxes game using Next.js and Konva.js, supporting both multiplayer and AI-driven gameplay.",
+        "Designed and implemented two heuristic-based AI bots in JavaScript, optimizing move selection for competitive gameplay.",
+        "Built a Deep Q-Learning AI bot in Python, integrating Reinforcement Learning (DQN) to improve decision-making over time.",
+        "Developed a FastAPI-based AI server, enabling real-time AI decision-making by fetching optimal moves from the trained model.",
+      ],
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Konva.js",
+        "Python",
+        "FastAPI",
+        "PyTorch",
+        "Reinforcement Learning (DQN)",
+      ],
+      githubLink:
+        "https://github.com/tanvirtareq/dots_and_boxes/tree/Feature/computer-move-using-reinforcement-learning",
+      liveAppLink: "https://dotsandboxes-silk.vercel.app/",
+    },
+    {
+      name: "Hotel Booking Website",
+      description: [
+        "Designed and developed a full-stack hotel booking management system to streamline reservations, room availability tracking, and customer management.",
+        "Implemented user-friendly booking workflows with secure authentication and role-based access (Admin, Manager, Customer).",
+        "Optimized the back-end architecture to ensure fast query handling and prevent double-booking issues.",
+        "Ensured scalability and maintainability by applying clean architecture and modern development practices.",
+      ],
+      technologies: [
+        "PostgreSQL",
+        "Java",
+        "Spring",
+        "Hibernate",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "JSP",
+        "Jquery",
+        "Bootstrap",
+      ],
+      githubLink: "https://github.com/tanvirtareq/PanthoNibash/tree/development",
+    },
+    {
+      name: "AI-powered Anki Add-on",
+      description: [
+        "Developed an Anki Desktop App add-on using agentic AI to create custom flashcards and add them to decks.",
+        "Utilized the Gemini API to generate high-quality, contextually relevant flashcards based on user input.",
+      ],
+      technologies: ["Python", "Anki Add-on Development", "Gemini API"],
+      githubLink: "https://github.com/tanvirtareq/anki-card-creator-add-on",
+    },
+    {
+      name: "Social Media Platform",
+      description: [
+        "Built a social media platform with features like user authentication, profile management, posting, commenting, and liking.",
+        "Implemented real-time notifications and messaging using WebSockets.",
+        "Designed live markdown editing, and post sharing with integrated polls.",
+        "Ensured data integrity and security with robust back-end validation and encryption.",
+      ],
+      technologies: ["Node.js", "Express", "MongoDB", "React", "Socket.io", "JWT"],
+      githubLink: "https://github.com/tanvirtareq/sust-cse-society",
+    },
+    {
+      name: "Real-Time Sign Language Detection",
+      description: [
+        "Developed a real-time sign language detection application using Python and Mediapipe.",
+        "Created an intuitive interface to collect sign language data from users.",
+        "Trained the collected data using Long Short-Term Memory (LSTM) networks for precise gesture recognition.",
+        "Built a complete application enabling real-time detection and interpretation of sign language gestures with high accuracy.",
+      ],
+      technologies: ["Python", "Mediapipe", "OpenCV", "PyQt", "Computer Vision"],
+    },
+    {
+      name: "Graphing Tool",
+      description: [
+        "Developed a JavaFX-based interactive graphing tool, similar to GeoGebra, for visualizing and drawing points, lines, circles, shapes, equations, and parallel/perpendicular lines.",
+        "Focused on delivering a user-friendly interface with precise geometric rendering and dynamic coordinate manipulation.",
+      ],
+      technologies: ["Java", "JavaFX"],
+      githubLink: "https://github.com/tanvirtareq/mygeocal",
+    },
+  ],
+
+  skills: {
+    "Programming Languages": ["Java", "Python", "JavaScript", "TypeScript", "C++", "C"],
+    Frontend: ["HTML", "CSS", "React", "Next.js", "Konva.js"],
+    Backend: ["Spring", "Hibernate", "Node.js", "Express", "FastAPI"],
+    Databases: ["Oracle DB", "PostgreSQL", "MongoDB"],
+    DevOps: ["Docker", "Jenkins", "Git"],
+    "Data Structures & Algorithms": ["Data Structures", "Algorithms"],
+    "Soft Skills": ["Problem-Solving", "Teamwork", "Mentorship"],
+  },
+
+  contact: {
+    linkedin: "https://www.linkedin.com/in/tanvirtareq/",
+    github: "https://github.com/tanvirtareq",
+    email: "tanvir.tareq.17@gmail.com",
+    phone: "+8801798234746",
+  },
+
+  competitiveProgramming: [
+    {
+      platform: "Codeforces",
+      id: "t17",
+      profileLink: "https://codeforces.com/profile/t17",
+      achievements: ["Candidate Master (Top 0.03% globally)", "Max rating 1941"],
+    },
+    {
+      platform: "CodeChef",
+      id: "tanvirtareq",
+      profileLink: "https://www.codechef.com/users/tanvirtareq",
+      achievements: ["5-star (Top 1% globally)", "Max rating 2101"],
+    },
+    {
+      platform: "LeetCode",
+      id: "tanvirtareq",
+      profileLink: "https://leetcode.com/tanvirtareq/",
+      achievements: ["High rating of 2283 (Top 0.69% globally)"],
+    },
+  ],
+
+  education: [
+    {
+      degree: "Bachelor of Science in Computer Science and Engineering",
+      institution: "Shahjalal University of Science and Technology",
+      period: "2017 - 2022",
+      notableCourses: [
+        "Data Structures and Algorithms",
+        "Object-Oriented Programming",
+        "Database Management Systems",
+        "Operating Systems",
+        "Computer Networks",
+        "Artificial Intelligence",
+        "Machine Learning",
+      ],
+      research: "Undergraduate Thesis on Natural Language Processing",
+    },
+    {
+      degree: "Higher Secondary Certificate (HSC)",
+      institution: "Scholarshome Majortila College, Sylhet",
+      period: "2017",
+      result: "GPA 5.00",
+      achievements: ["Achieved government scholarship"],
+    },
+    {
+      degree: "Secondary School Certificate (SSC)",
+      institution: "Jalalabad Cantonment Board High School, Sylhet",
+      period: "2014",
+      result: "GPA 5.00",
+    },
+  ],
+
+  judgingExperience: [
+    {
+      role: "Judge and Problem Setter",
+      event: "Sylhet Engineering College Junior Inter University Programming Contest 2022",
+      responsibilities: [
+        "Evaluated solutions and provided feedback to 82 teams consisting of 3 members each from around 30 universities in Bangladesh.",
+        "Worked alongside 5 other judges to ensure a fair and challenging contest for participants.",
+      ],
+    },
+    {
+      role: "Problem Setter",
+      event: "BSFMSTU CSE FEST Programming Contest 2023",
+      responsibilities: ["Designed and prepared 4 challenging programming problems for the contest."],
+    },
+    {
+      role: "Judge",
+      event: "SUST CSE Carnival 2024 (IUPC)",
+      responsibilities: [
+        "Judged at SUST CSE Carnival 2024, where 120 teams of 3 students from different universities across Bangladesh participated.",
+        "Wrote alternative solutions and added test cases to ensure a strong dataset.",
+      ],
+    },
+  ],
+
+  teachingExperience: [
+    {
+      institution: "Notre Dame University Bangladesh",
+      responsibilities: [
+        "Teach undergraduate students Data Structures, Algorithms, C, and C++.",
+        "Designed and delivered lectures, coding exercises, and real-world problem-solving sessions.",
+        "Mentored students in improving problem-solving skills and preparing for programming contests.",
+        "Simplified complex concepts to improve student understanding and engagement.",
+      ],
+    },
+  ],
+
+  technicalWritingExperience: [
+    {
+      company: "Enablegeek",
+      companyWebsite: "https://www.enablegeek.com/",
+      responsibilities: [
+        "Authored blogs on Algorithms and Data Structures, simplifying complex topics for students and enthusiasts.",
+        "Wrote Python Q&A articles covering common pitfalls and practical coding solutions.",
+      ],
+    },
+  ],
+
+  programmingContestExperience: [
+    {
+      event: "Cefalo CodeFiesta 2022: AUST IUPC",
+      team: "SUST_LeviSquad",
+      achievements: ["Earned 10th place out of 105 teams, competing against participants from 60 universities across Bangladesh."],
+    },
+    {
+      event: "Intra SUST Programming Contest 2020",
+      id: "tanvirtareq",
+      achievements: ["Achieved 3rd place, progressing from the preliminary round against 300 contestants to the final top 35."],
+    },
+    {
+      event: "Meta Hacker Cup T-Shirt Winner (2020, 2021, 2022, 2024)",
+      id: "Tanvir Rahman Tareq",
+      achievements: [
+        "Earned a Meta HackerCup T-shirt in 2020 by ranking 1431 out of 18,000 participants in the preliminary contest.",
+        "Secured a Meta HackerCup T-shirt in 2021 by achieving a ranking of 1979 in Round 2, competing against approximately 35,000 participants in the preliminary round.",
+        "Attained a Meta HackerCup T-shirt in 2022 by achieving an impressive ranking of 979 in Round 2, surpassing around 28,000 participants in the preliminary round.",
+        "Earned the Meta HackerCup 2024 T-shirt by ranking 959th out of 22,494 participants worldwide in the second round.",
+      ],
+    },
+    {
+      event: "2021 ICPC Asia Dhaka Regional Online Preliminary Contest",
+      team: "SUST_LeviSquad",
+      achievements: ["Achieved 10th place in the 2021 ICPC contest, competing against 1747 teams of 3 contestants."],
+    },
+    {
+      event: "Google Kick Start Round B",
+      id: "tanvir_tareq",
+      achievements: ["Global rank 225"],
+    },
+  ],
+};
