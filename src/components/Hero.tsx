@@ -46,7 +46,7 @@ function useTypewriter(words: string[]) {
 }
 
 const STATS = [
-  { value: "2.5+", label: "Years Experience" },
+  { value: `${portfolio.yearsOfExperience}+`, label: "Years Experience" },
   { value: "CM", label: "Codeforces (Top 0.03%)" },
   { value: "5★", label: "CodeChef (Top 1%)" },
   { value: "2283", label: "LeetCode Rating" },

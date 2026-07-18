@@ -59,6 +59,7 @@ export interface ProgrammingContestExperience {
 export interface PortfolioData {
   name: string;
   title: string;
+  yearsOfExperience: number;
   aboutMe: string;
   experience: Experience[];
   projects: Project[];
@@ -77,11 +78,14 @@ export interface PortfolioData {
   programmingContestExperience: ProgrammingContestExperience[];
 }
 
+const YEARS_OF_EXPERIENCE = 3;
+
 export const portfolio: PortfolioData = {
   name: "Tanvir Tareq",
   title: "Software Engineer",
+  yearsOfExperience: YEARS_OF_EXPERIENCE,
   aboutMe:
-    "<p>I am a passionate <strong>Software Engineer</strong> with over <strong>2.5 years of professional experience</strong> in building scalable, high-performance applications.<br>\nCurrently, I work at <strong>Therap Services, LLC</strong>, where I have contributed to enhancing core product features by improving billing efficiency, designing custom validation systems, and optimizing workflows that significantly boosted user experience and reduced processing time. I have also worked on migrating the frontend from <strong>JSP to React</strong>, modernizing the user interface and improving maintainability.<br>\nI hold a <strong>Bachelor's degree in Computer Science and Engineering</strong> from <strong>Shahjalal University of Science and Technology</strong>.<br>\nBeyond my professional work, I have a strong background in <strong>competitive programming</strong>, where I consistently ranked among the top performers across global platforms:<br>\n- <strong>Candidate Master</strong> on Codeforces (Top 0.03% globally)<br>\n- <strong>5-star on CodeChef</strong> (Top 1% globally)<br>\n- High rating of <strong>2283 on LeetCode</strong> (Top 0.69% globally)<br>\n- Achieved top placements in multiple <strong>ICPC and university-level contests</strong><br>\n- 4-time Meta HackerCup T-shirt winner (Top 8%, 6%, 4%, and 959th worldwide)<br>\nI am also deeply interested in <strong>Artificial Intelligence</strong> and have explored AI-driven personal projects, including developing a <strong>Dots and Boxes game</strong> with AI and building an <strong>Anki Desktop App add-on</strong> using <strong>agentic AI</strong> to create custom flashcards and add them to decks. For generating these custom flashcards, I utilized the <strong>Gemini API</strong>.<br>\nDriven by curiosity and a commitment to excellence, I strive to bridge the gap between <strong>theory and real-world applications</strong>, creating solutions that are both efficient and impactful.</p>",
+    `<p>I am a passionate <strong>Software Engineer</strong> with over <strong>${YEARS_OF_EXPERIENCE} years of professional experience</strong> in building scalable, high-performance applications.<br>\nCurrently, I work at <strong>Therap Services, LLC</strong>, where I have contributed to enhancing core product features by improving billing efficiency, designing custom validation systems, and optimizing workflows that significantly boosted user experience and reduced processing time. I have also worked on migrating the frontend from <strong>JSP to React</strong>, modernizing the user interface and improving maintainability.<br>\nI hold a <strong>Bachelor's degree in Computer Science and Engineering</strong> from <strong>Shahjalal University of Science and Technology</strong>.<br>\nBeyond my professional work, I have a strong background in <strong>competitive programming</strong>, where I consistently ranked among the top performers across global platforms:<br>\n- <strong>Candidate Master</strong> on Codeforces (Top 0.03% globally)<br>\n- <strong>5-star on CodeChef</strong> (Top 1% globally)<br>\n- High rating of <strong>2283 on LeetCode</strong> (Top 0.69% globally)<br>\n- Achieved top placements in multiple <strong>ICPC and university-level contests</strong><br>\n- 4-time Meta HackerCup T-shirt winner (Top 8%, 6%, 4%, and 959th worldwide)<br>\nI am also deeply interested in <strong>Artificial Intelligence</strong> and have explored AI-driven personal projects, including developing a <strong>Dots and Boxes game</strong> with AI and building an <strong>Anki Desktop App add-on</strong> using <strong>agentic AI</strong> to create custom flashcards and add them to decks. For generating these custom flashcards, I utilized the <strong>Gemini API</strong>.<br>\nDriven by curiosity and a commitment to excellence, I strive to bridge the gap between <strong>theory and real-world applications</strong>, creating solutions that are both efficient and impactful.</p>`,
 
   experience: [
     {
