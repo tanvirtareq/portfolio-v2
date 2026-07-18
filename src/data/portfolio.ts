@@ -81,7 +81,7 @@ export interface PortfolioData {
 const YEARS_OF_EXPERIENCE = 3;
 
 export const portfolio: PortfolioData = {
-  name: "Tanvir Tareq",
+  name: "Tanvir Rahman Tareq",
   title: "Software Engineer",
   yearsOfExperience: YEARS_OF_EXPERIENCE,
   aboutMe:

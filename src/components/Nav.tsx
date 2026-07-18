@@ -2,6 +2,7 @@
 
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { portfolio } from "@/data/portfolio";
 import ThemeToggle from "./ThemeToggle";
 
 const LINKS = [
@@ -54,9 +55,9 @@ export default function Nav() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a
           href="#top"
-          className="font-mono text-sm font-semibold tracking-tight text-text"
+          className="shrink-0 whitespace-nowrap font-mono text-sm font-semibold tracking-tight text-text"
         >
-          <span className="text-accent">&lt;</span>Tanvir Tareq<span className="text-accent">/&gt;</span>
+          <span className="text-accent">&lt;</span>{portfolio.name}<span className="text-accent">/&gt;</span>
         </a>
 
         <div className="hidden items-center gap-1 lg:flex">
